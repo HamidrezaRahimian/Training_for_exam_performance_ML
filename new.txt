@@ -1,0 +1,264 @@
+TASK
+You must create a complete, fully functional, fully graded Jupyter Notebook solution for the Machine Learning Titanic exam project described in the attached specification. Your output must strictly follow every requirement, grading point, structure rule, and mandatory component defined in the document “spezifikation.pdf”. You must also reproduce the same step-by-step thinking, clean structure, commenting style, explanations, visualizations and pipeline mentality used in the provided workshops “workshop_01.ipynb” and “workshop_02.ipynb”. Your job is to generate the full Jupyter Notebook output exactly in this style.
+
+GENERAL REQUIREMENTS
+
+Notebook language
+
+Notebook must be 100% in English
+
+Comments must be in English
+
+Explanations must be in English
+
+Style + Mindset
+Match the structure, pacing, clarity, chunking, and code-explanation balance from the workshops.
+The style must reproduce:
+
+clear headings
+
+step-by-step logic
+
+clean cells
+
+every code block commented
+
+same level of reasoning, same quality of charts
+
+no sloppy shortcuts
+
+no unnecessary fluff
+
+Mandatory technical constraints
+As required in the specification:
+
+Use scikit-learn Pipelines for everything
+
+Use ColumnTransformer correctly
+
+Imputation must be inside the pipeline
+
+Encoding must be inside the pipeline
+
+Scaling must be inside the pipeline
+
+Feature engineering must be inside the pipeline via FunctionTransformer or Custom Transformer
+
+No preprocessing outside the pipeline
+
+No data leakage
+
+random_state everywhere
+
+Use these 3 ML models: KNN, RandomForest, GradientBoosting
+
+Hyperparameter tuning with GridSearchCV OR RandomizedSearchCV
+
+At least 5-fold CV
+
+Hypothesis test (Chi-Square or Fisher) with correct H0/H1, p-value interpretation, plot, automated function
+
+Full evaluation: accuracy, precision, recall, F1, confusion matrix, ROC curves, AUC
+
+Feature importance for tree models
+
+Full comparison between models
+
+Reason-based selection of best model
+
+You must ensure the notebook covers all 50 points from the grading table.
+
+Avoid all penalized mistakes
+
+No preprocessing before train_test_split
+
+No missing pipelines
+
+No missing random_state
+
+No German text
+
+No messy markdown
+
+No missing README structure
+
+No incorrect column handling
+
+No incorrect parameter naming for pipelines
+
+NOTEBOOK STRUCTURE (EXACT ORDER)
+
+01 – Imports & Settings
+
+All imports
+
+Warnings filter
+
+Random state variable
+
+Style consistent with workshops
+
+02 – Load Dataset
+
+Load train.csv
+
+Basic exploration: head, info, simple stats
+
+03 – Exploratory Data Analysis
+Must include:
+
+Missing value visualization
+
+Distribution plots
+
+Correlation overview
+
+Identification of relevant features for hypothesis (family size)
+
+Visualizations styled like workshops
+
+04 – Feature Engineering
+Must be inside pipeline:
+
+Family size
+
+Title extraction from Name
+
+Optional: Cabin letter
+
+Rare category handling
+
+All created using FunctionTransformer or custom class
+
+Clear markdown explaining everything
+
+Example before/after transformation
+
+05 – Preprocessing Pipelines
+Implement:
+
+numeric pipeline: SimpleImputer or KNNImputer + StandardScaler or MinMaxScaler
+
+categorical pipeline: SimpleImputer + OneHotEncoder
+
+ColumnTransformer merging both
+
+Unified preprocessing block used for all models
+
+06 – Train-Test Split
+
+stratify
+
+random_state
+
+correct proportions
+
+absolutely no leakage
+
+07 – Model Pipelines (Baseline Models)
+Three full pipelines:
+
+KNN
+
+RandomForest
+
+GradientBoosting
+Each pipeline must include:
+
+preprocessing + classifier
+
+baseline metrics: accuracy, precision, recall, F1
+
+confusion matrix
+
+ROC curve
+
+08 – Hyperparameter Optimization
+For each classifier:
+
+create parameter grids
+
+use correct naming: classifier__param
+
+use GridSearchCV or RandomizedSearchCV
+
+5-fold CV or more
+
+compare performance before/after tuning
+
+show cv_results_
+
+visualize tuned vs baseline performance
+
+list best parameters
+
+09 – Evaluation & Comparison
+
+Table comparing all tuned models
+
+Combined ROC curves
+
+Feature importance for tree models
+
+Interpretation of results
+
+Selection of best model with reasoning
+
+10 – Hypothesis Testing
+Hypothesis: “Families with size ≥ 4 had lower survival probability than solo travelers (size 1).”
+Include:
+
+Clear H0 and H1
+
+Extract both groups
+
+Descriptive statistics
+
+Visualization comparing groups
+
+Chi-Square or Fisher test
+
+p-value interpretation
+
+Automated function: run_family_size_hypothesis_test(df) returning full results
+
+11 – Final Conclusion
+
+Summary of ML results
+
+Best model
+
+Hypothesis test conclusion
+
+12 – KI Usage Documentation (placeholder)
+
+Section must exist, contents will be added manually
+
+OUTPUT REQUIREMENTS
+
+Entire output formatted exactly like a real Jupyter Notebook
+
+Use Markdown + code cells logically
+
+Every code cell must include comments
+
+Explanations must be concise and clear
+
+Visualizations must be readable and consistent
+
+No German text anywhere
+
+ADDITIONAL RULES
+
+Never hallucinate data
+
+Never skip any grading requirement
+
+Never remove any pipeline component
+
+Keep structure clean
+
+Maintain workshop-like tone and structure
+
+NOW GENERATE:
+A complete Jupyter Notebook formatted output that satisfies every requirement above.
